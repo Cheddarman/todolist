@@ -1,0 +1,57 @@
+/*.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+*/
+
+
+.mainbit {
+  width:700px;
+  margin:auto;
+  min-height: 100px;
+  background-color: blue;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+h1 {
+  color:white;
+  
+}
+
+#whattodo {
+  margin:auto;
+  width: 600px;
+  font-size:20px;
+}
+
+.listItem div {
+  border:solid 1px #999;
+  
+  background-color: white;
+  width:600px;
+  margin: auto;
+  font-size: 20px;
+}
+

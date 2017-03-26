@@ -1,21 +1,60 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import KillItem from './Delete';
 
-class App extends Component {
-  render() {
+
+const FuckingList = React.createClass({
+  
+
+  getInitialState: function() {
+    return {
+      list: [],
+      text: '',
+      visible:{display:"block"}
+    }
+  },
+
+
+
+  handleChange: function(e) {
+    this.setState({
+      text: e.target.value
+    })
+  },
+
+//
+
+  handleSubmit: function(e){
+    e.preventDefault()
+    this.setState ({
+      list: [this.state.text,...this.state.list],
+      text: ''
+    })
+  },
+
+  render(){
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <div className="mainbit">
+        <div className="list">
+          <h1>whatitis</h1>
+          <form onSubmit={this.handleSubmit}>
+            <button id="arrowButton" /><input id="whattodo" type="text" onChange={this.handleChange} placeholder="What needs to be done?" value={this.state.text} />
+          </form>
+          <div key="i" className="listItem">
+            {this.state.list.map(function(item, i){
+              return <div clasName="thing">{item} <button onClick={this.deleteItem}>{i}</button></div>
+            })}
+          </div>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     );
   }
-}
+})
 
-export default App;
+
+
+
+
+
+
+export default FuckingList;
