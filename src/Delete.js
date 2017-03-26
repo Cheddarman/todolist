@@ -1,31 +1,31 @@
 
 
- const KillItem = React.createClass({
+//  const KillItem = React.createClass({
   
-  getInitialState:function(){
-  	return{
-  		visible:{display:"block"}
-  	}
-  },
+//   // getInitialState:function(){
+//   // 	return{
+//   // 		visible:{display:"block"}
+//   // 	}
+//   // },
   
 
-  deleteItem:function(){
-  	this.setState({visible:{display:"none"}})
-  }
-}
-
-//   askDeleteChild:function(){
-//     this.setState({visible:{display:"inline-block", marginLeft:20}})
-//   },
-//   deleteChild:function(e){
-//     deleteChild(e)
-//   },
-//   render: function () {
-//     return (
-//       <li style={{fontSize:24}}><p style={{display:"inline-block",width:"33%"}}>{(this.props.name).toUpperCase()}</p>  <RaisedButton style={{marginLeft:30}} title=":...(" onTouchTap={this.askDeleteChild} label="Remove Child"/> <RaisedButton style={this.state.visible} title=":...(" onTouchTap={(e) => this.deleteChild(this.props.id)} label="Yes"/></li>
-//     )
+//   deleteItem:function(){
+//   	this.setState({visible:{display:"none"}})
 //   }
-// })
+// }
+
+// //   askDeleteChild:function(){
+// //     this.setState({visible:{display:"inline-block", marginLeft:20}})
+// //   },
+// //   deleteChild:function(e){
+// //     deleteChild(e)
+// //   },
+// //   render: function () {
+// //     return (
+// //       <li style={{fontSize:24}}><p style={{display:"inline-block",width:"33%"}}>{(this.props.name).toUpperCase()}</p>  <RaisedButton style={{marginLeft:30}} title=":...(" onTouchTap={this.askDeleteChild} label="Remove Child"/> <RaisedButton style={this.state.visible} title=":...(" onTouchTap={(e) => this.deleteChild(this.props.id)} label="Yes"/></li>
+// //     )
+// //   }
+// // })
 
 
-export default KillItem;
+// export default KillItem;

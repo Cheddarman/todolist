@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import KillItem from './Delete';
+// import KillItem from './Delete';
 
 
 const FuckingList = React.createClass({
@@ -32,6 +32,12 @@ const FuckingList = React.createClass({
     })
   },
 
+  handleMurder: function(e){
+    e.preventDefault()
+    this.setState ({
+      visible:{display:"none"}
+    })
+  },
   render(){
     return (
       <div className="mainbit">
@@ -42,7 +48,7 @@ const FuckingList = React.createClass({
           </form>
           <div key="i" className="listItem">
             {this.state.list.map(function(item, i){
-              return <div clasName="thing">{item} <button onClick={this.deleteItem}>{i}</button></div>
+              return <div clasName="thing">{item} <button onClick={this.handleMurder}>{i}</button></div>
             })}
           </div>
         </div>
