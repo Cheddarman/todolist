@@ -10,7 +10,7 @@ const FuckingList = React.createClass({
     return {
       list: [],
       text: '',
-      visible:{display:"block"}
+    //  visible:{display:"block"}
     }
   },
 
@@ -32,12 +32,23 @@ const FuckingList = React.createClass({
     })
   },
 
-  handleMurder: function(e){
-    e.preventDefault()
-    this.setState ({
-      visible:{display:"none"}
-    })
-  },
+
+  // deleteTask: function(e) {
+  //   var taskIndex = parseInt(e.target.value, 10);
+  //   console.log('remove task: %d', taskIndex, this.state.items[taskIndex]);
+  //   this.setState(state => {
+  //       state.items.splice(taskIndex, 1);
+  //       return {items: state.items};
+  //   });
+  // },
+
+
+  // handleMurder: function(e){
+  //   e.preventDefault()
+  //   this.setState ({
+  //     visible:{display:"none"}
+  //   })
+  // },
   render(){
     return (
       <div className="mainbit">
@@ -46,11 +57,15 @@ const FuckingList = React.createClass({
           <form onSubmit={this.handleSubmit}>
             <button id="arrowButton" /><input id="whattodo" type="text" onChange={this.handleChange} placeholder="What needs to be done?" value={this.state.text} />
           </form>
-          <div key="i" className="listItem">
-            {this.state.list.map(function(item, i){
-              return <div clasName="thing">{item} <button onClick={this.handleMurder}>{i}</button></div>
-            })}
-          </div>
+          <div className="listItem">
+            <div key="i" className="guy">
+              {this.state.list.map(function(item, i){
+                return <div clasName="thing">
+                {item} <button className="deleteButton">{i}</button>
+                </div>
+              })}
+            </div>
+          </div>  
         </div>
       </div>
     );
@@ -59,7 +74,7 @@ const FuckingList = React.createClass({
 
 
 
-
+//onClick={this.handleMurder}
 
 
 
