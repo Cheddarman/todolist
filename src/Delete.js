@@ -1,3 +1,33 @@
+const TaskList = React.createClass({
+	
+    deleteElement:function(){
+        console.log("remove");
+    },
+
+    render: function(){
+    
+        var displayTask  = function(task, taskIndex){
+            console.log("NEW ADDED TASK"+task);
+    
+            return <li>
+                {task}
+                <button onClick= {this.deleteElement}> Delete </button>
+            </li>;
+        };
+    
+        return <div>
+            {this.props.items.map((task, taskIndex) => 
+                <div key={taskIndex}>
+                    {task}
+                    <button onClick={this.props.deleteTask} value={taskIndex}> Delete </button>
+                </div>
+            )}
+        </div>;
+    }
+ });
+
+
+
 
 
 //  const KillItem = React.createClass({
