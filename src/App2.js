@@ -2,6 +2,7 @@ import React from 'react'
 
 import FNForm from './FNForm'
 import FNList from './FNList'
+import uuid from 'uuid'
 
 export default React.createClass({
   getInitialState() {
@@ -12,8 +13,16 @@ export default React.createClass({
   updateList(endevor){
   	this.setState({
   		items: [...this.state.items, {
-  			title: endevor
+  			title: endevor,
+  			id: "id" + uuid()
   		}]
+  	})
+  },
+  murderItem(id){
+  	this.setState({
+  		items: this.state.items.filter(item=>{
+  			return item.id !== id
+  		})
   	})
   },
   render() {
@@ -21,7 +30,7 @@ export default React.createClass({
     	<div>
     		<h1>Fuckin' do this shit</h1>
     		<FNForm updateList={this.updateList}/>
-    		<FNList items={this.state.items} />
+    		<FNList murderItem={this.murderItem} items={this.state.items} />
     	</div>
     )
   }

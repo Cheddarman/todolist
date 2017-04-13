@@ -1,21 +1,19 @@
 import React from 'react'
+import FNListItem from './FNListItem'
 
 export default React.createClass({
   getDefaultProps() {
     return {
         items: []
+        
     }
   },
 
   render() {
     return(
     	<ul>
-        {this.props.items.map((item, i)=>(
-          <li key={"i" + i}>
-            <input type="checkbox" id={"i" + item.id} />
-            <label htmlFor={"i" + item.id}>{item.title}</label>
-            <button onClick={this.murder}>X</button>
-          </li>
+        {this.props.items.map((item)=>(
+          <FNListItem murderItem={this.props.murderItem} {...item} />
         ))}
       </ul>
     )
