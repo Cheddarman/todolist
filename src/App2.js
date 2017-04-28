@@ -27,7 +27,7 @@ export default React.createClass({
   },
   render() {
     return(
-    	<div>
+    	<div className='container'>
     		<h1>Fuckin' do this shit</h1>
     		<FNForm updateList={this.updateList}/>
     		<FNList murderItem={this.murderItem} items={this.state.items} />
